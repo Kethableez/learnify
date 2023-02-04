@@ -1,0 +1,29 @@
+@use '../../../../assets/styles/colors';
+
+.ktbz-navigation-item {
+  font-weight: 700;
+  align-self: center;
+  margin-left: 36px;
+  gap: 18px;
+  color: colors.$gray-200;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  i {
+    color: colors.$gray-200;
+
+  }
+
+  &:hover {
+      color: colors.$primary-400;
+      i {
+        color: colors.$gray-200;
+      }
+  }
+
+  &.active {
+    color: colors.$white-100;
+    i {
+      color: colors.$primary-400;
+    }
+  }
+}

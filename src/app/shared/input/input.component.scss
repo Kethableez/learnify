@@ -1,0 +1,39 @@
+@use '../../../assets/styles/colors';
+
+.ktbz-input {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.spinner {
+  color: colors.$gray-200;
+  font-size: 16px;
+  animation-iteration-count: infinite;
+  animation-name: rotate;
+}
+
+@keyframes rotate {
+  0% { rotate: 0deg;}
+  50% { rotate: 180deg;}
+  100% { rotate: 360deg}
+}
+
+.input-wrapper {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  i {
+    position: absolute;
+    top: 20%;
+    right: 10px;
+    z-index: 99;
+    color: colors.$secondary-1;
+  }
+  i.btn-icon {
+    cursor: pointer;
+    color: white;
+  }
+}

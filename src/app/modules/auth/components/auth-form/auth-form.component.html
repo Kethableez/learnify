@@ -1,0 +1,8 @@
+<div class="ktbz-auth-form">
+  <ktbz-tabs [tabs]="authTabs" (tabChanged)="changeForm($event)"></ktbz-tabs>
+  <ng-container [ngSwitch]="selectedForm">
+    <ktbz-login-form *ngSwitchCase="'login'"></ktbz-login-form>
+    <ktbz-register-form *ngSwitchCase="'register'"></ktbz-register-form>
+  </ng-container>
+</div>
+

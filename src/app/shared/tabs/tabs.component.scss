@@ -1,0 +1,31 @@
+@use '../../../assets/styles/colors';
+
+.ktbz-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 36px;
+}
+
+.tab-button {
+  user-select: none;
+  cursor: pointer;
+  font-weight: 700;
+  border-bottom: 1px solid colors.$white-200;
+  color: colors.$gray-200;
+  flex-grow: 1;
+  text-align: center;
+  padding: .7rem 2rem;
+
+  transition: .2s ease-in-out;
+
+  &:hover {
+    color: colors.$primary-400;
+  }
+}
+
+.tab-button.active {
+  border-bottom: 1px solid colors.$primary-400;
+  color: colors.$white-100;
+}

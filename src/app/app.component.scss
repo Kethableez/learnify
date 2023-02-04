@@ -1,0 +1,13 @@
+@use '../assets/styles/colors';
+
+.app-wrapper {
+  background-color: colors.$black-100;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.page-content {
+  flex-grow: 1;
+}

@@ -1,0 +1,3 @@
+<div class="ktbz-tabs">
+  <div *ngFor="let tab of tabs" class="tab-button" [class.active]="isActive(tab)" (click)="toggleTab(tab)"> {{ tab.label }} </div>
+</div>

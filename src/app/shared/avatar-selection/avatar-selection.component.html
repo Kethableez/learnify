@@ -1,0 +1,9 @@
+<div class="ktbz-avatar-selection flex-row">
+  <img class="preview" [src]="getPath(getAvatarName(selectedAvatar))">
+  <span>
+    <button #button class="btn btn-primary" (click)="toggleSelection('open')"> Select your avatar</button>
+  </span>
+  <div class="selection flex-row" #selection *ngIf="selectionState === 'open'">
+    <img class="preview" (click)="selectAvatar(avatar)" [class.selected]="avatar === selectedAvatar" *ngFor="let avatar of avatars" [src]="getPath(getAvatarName(avatar))">
+  </div>
+</div>

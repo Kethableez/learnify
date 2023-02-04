@@ -1,0 +1,15 @@
+<div class="ktbz-login-form">
+  <form [formGroup]="loginForm" class="flex-col gap-s">
+    <ktbz-input [label]="'Username'" [control]="getControl('username')"></ktbz-input>
+    <ktbz-input
+      [label]="'Password'"
+      [type]="'password'"
+      [control]="getControl('password')"
+    >
+    </ktbz-input>
+
+    <span class="ktbz-login-form__btn-container">
+      <button [disabled]="!loginForm.valid" (click)="doLogin()" class="btn btn-primary">Login</button>
+    </span>
+  </form >
+</div>

@@ -1,1 +1,129 @@
-/* You can add global styles to this file, and also import other style files */
+@use './assets/styles/colors';
+@use './assets/styles/utils';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: colors.$white-200;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.ktbz-card {
+  background-color: colors.$black-200;
+  border-radius: utils.$radius-lg;
+  // box-shadow: 0 6px 10px rgba($color: #000000, $alpha: .25);
+}
+
+h1 {
+  font-size: 48px;
+}
+
+label {
+  font-weight: 700;
+  color: colors.$white-100;
+}
+
+textarea {
+  position: relative;
+  border: .5px solid colors.$white-200;
+  border-radius: utils.$radius-sm;
+  background-color: unset;
+  font-weight: 700;
+  color: colors.$white-100;
+  padding: .5rem 1rem;
+  flex-grow: 1;
+  appearance: none;
+  outline: none;
+  min-height: 32px;
+  resize: vertical;
+  transition: border-color .2s ease-in-out;
+
+}
+
+input {
+  position: relative;
+  border: .5px solid colors.$white-200;
+  border-radius: utils.$radius-sm;
+  background-color: unset;
+  font-weight: 700;
+  color: colors.$white-100;
+  padding: .5rem 1rem;
+  flex-grow: 1;
+  appearance: none;
+  outline: none;
+  transition: .2s ease-in-out;
+
+  &::placeholder {
+    color: colors.$gray-200;
+  }
+}
+
+input:focus-within,
+input.ng-touched.ng-pending:not(:focus-within),
+textarea:focus-within,
+textarea.ng-touched.ng-pending:not(:focus-within) {
+  border-color: colors.$secondary-1;
+}
+
+input.ng-touched.ng-invalid:not(:focus-within),
+textarea.ng-touched.ng-invalid:not(:focus-within) {
+  border-color: colors.$primary-500;
+}
+
+input.ng-touched.ng-valid:not(:focus-within):not(.ng-pristine),
+textarea.ng-touched.ng-valid:not(:focus-within):not(.ng-pristine) {
+  border-color: colors.$secondary-2;
+}
+
+.btn {
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  border-radius: utils.$radius-sm;
+  font-weight: 700;
+  // font-size: 18px;
+  flex-grow: 1;
+  padding: .5rem 1.5rem;
+  transition: .1s ease-in-out;
+}
+
+.btn.btn-primary {
+  background-color: colors.$primary-400;
+  color: colors.$white-100;
+
+  &:hover {
+  background-color: colors.$primary-300;
+  }
+
+  &:active {
+    background-color: colors.$primary-500;
+  }
+
+  &:disabled {
+    background-color: colors.$gray-100;
+    color: colors.$gray-200;
+  }
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.gap-s {
+  gap: 18px;
+}
+
+.gap-m {
+  gap: 36px;
+}
+
+.btn-icon {
+  cursor: pointer;
+  color: black;
+}

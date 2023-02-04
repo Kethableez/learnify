@@ -1,0 +1,45 @@
+@use '../../../assets/styles/colors';
+
+.ktbz-auth {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  background-color: colors.$black-100;
+
+
+  &__auth-forms {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 48px;
+  }
+
+  &__form-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__background {
+    width: 50%;
+    object-fit: cover;
+  }
+
+  i {
+    color: colors.$secondary-1;
+  }
+
+  .ktbz-card {
+    width: clamp(450px, 25%, 550px);
+  }
+}

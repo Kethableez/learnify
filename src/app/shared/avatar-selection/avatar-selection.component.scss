@@ -1,0 +1,37 @@
+@use '../../../assets/styles/colors';
+
+.preview {
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid colors.$white-200;
+  border-radius: 9999px;
+}
+
+.preview.selected {
+  border: 2px solid colors.$secondary-2;
+
+}
+
+.ktbz-avatar-selection {
+  position: relative;
+  padding: 18px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px dashed colors.$gray-200;
+}
+
+.selection {
+  border-radius: 12px;
+  border: 1px dashed colors.$gray-200;
+  position: absolute;
+  padding: 18px;
+  top: 100%;
+  width: calc(100% - 36px);
+  transform: translateX(-18px);
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: colors.$black-200;
+  z-index: 100;
+  gap: 5px;
+}

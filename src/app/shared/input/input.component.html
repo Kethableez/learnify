@@ -1,0 +1,17 @@
+<div class="ktbz-input">
+  <label>{{label}}</label>
+  <div  class="input-wrapper">
+    <ng-container *ngIf="type==='textarea'; else defaultInput">
+      <textarea [formControl]="control"></textarea>
+    </ng-container>
+    <ng-template #defaultInput>
+      <input ktbzDisableAutofill [formControl]="control" [type]="type">
+      <i *ngIf="control.status === 'PENDING'" class="gg-spinner"></i>
+      <i *ngIf="isPassword" (click)="toggleVisibility()" class="bi btn-icon" [class.bi-eye]="visible" [class.bi-eye-slash]="!visible"></i>
+    </ng-template>
+  </div>
+
+  <ng-container *ngIf="control.errors && control.touched && !isFocused">
+    <ktbz-input-error [errors]="control.errors"></ktbz-input-error>
+  </ng-container>
+</div>

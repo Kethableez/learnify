@@ -1,0 +1,26 @@
+<div class="ktbz-register-form">
+  <form [formGroup]="registerForm" class="flex-col gap-s">
+    <ktbz-avatar-selection
+      [formControl]="getControl('avatar')"
+    ></ktbz-avatar-selection>
+
+    <ktbz-input [label]="'Username'" [control]="getControl('username')">
+    </ktbz-input>
+    <ktbz-input
+      [label]="'Password'"
+      [type]="'password'"
+      [control]="getControl('password')"
+    >
+    </ktbz-input>
+    <ktbz-input [label]="'First Name'" [control]="getControl('firstName')">
+    </ktbz-input>
+    <ktbz-input [label]="'Last Name'" [control]="getControl('lastName')">
+    </ktbz-input>
+
+    <span class="ktbz-register-form__btn-container">
+      <button [disabled]="!registerForm.valid" class="btn btn-primary">
+        Register
+      </button>
+    </span>
+  </form>
+</div>
